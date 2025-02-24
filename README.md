@@ -11,10 +11,10 @@ Proyecto desarrollado en Python que reconoce objetos y que a través de dependen
 
 
 ### Realizado por:
-Ricardo Colindres
-Oscar Barrios
-Ricardo Marroquín 
-Sara Archila
-Axel
+- Ricardo Colindres
+- Oscar Barrios
+- Ricardo Marroquín 
+- Sara Archila
+- Axel
 
 
