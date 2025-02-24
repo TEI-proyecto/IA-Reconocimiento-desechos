@@ -1,4 +1,4 @@
-# Reconocimiento-Desechos
+# Reconocimiento de Desechos
 Proyecto que es capaz de reconocer los desechos, clasificandolos de distinta manera:
 - Vidrio
 - Plástico
