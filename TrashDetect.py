@@ -3,10 +3,10 @@ from ultralytics import YOLO
 import cv2
 import math
 
-# Modelo
+# Edición de Modelo 
 model = YOLO('Modelos/best.pt')
 
-# Cap
+# Tamaño de la pantalla Cap
 cap = cv2.VideoCapture(0)
 cap.set(3, 1280)
 cap.set(4, 720)
