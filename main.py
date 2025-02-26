@@ -34,7 +34,7 @@ def images(img, imgtxt):
     lblimgtxt.configure(image=img_txt)
     lblimgtxt.image = img_txt
 
-# Scanning Function
+# Scanning Function Material
 def Scanning():
     global img_metal, img_glass, img_plastic, img_carton, img_medical
     global img_metaltxt, img_glasstxt, img_plastictxt, img_cartontxt, img_medicaltxt, pantalla
@@ -53,7 +53,7 @@ def Scanning():
         ret, frame = cap.read()
         frame_show =cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-        # True
+        # True Conditional
         if ret == True:
             # Yolo | AntiSpoof
             results = model(frame, stream=True, verbose=False)
@@ -107,7 +107,7 @@ def Scanning():
                                       (0, 0, 0), cv2.FILLED)
                         cv2.putText(frame_show, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 
-                        # Clasificacion
+                        # Clasification Images Class
                         images(img_glass, img_glasstxt)
 
                     if cls == 2:
@@ -123,7 +123,7 @@ def Scanning():
                                       (0, 0, 0), cv2.FILLED)
                         cv2.putText(frame_show, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
-                        # Clasificacion
+                        # Clasification Images Plastic
                         images(img_plastic, img_plastictxt)
 
                     if cls == 3:
@@ -139,7 +139,7 @@ def Scanning():
                                       (0, 0, 0), cv2.FILLED)
                         cv2.putText(frame_show, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, (150, 150, 150), 2)
 
-                        # Clasificacion
+                        # Clasification Images Cardboard
                         images(img_carton, img_cartontxt)
 
                     if cls == 4:
@@ -155,7 +155,7 @@ def Scanning():
                                       (0, 0, 0), cv2.FILLED)
                         cv2.putText(frame_show, text, (x1, y1 - 5), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
-                        # Clasificacion
+                        # Clasification Images Medical 
                         images(img_medical, img_medicaltxt)
 
             if detect == False:
